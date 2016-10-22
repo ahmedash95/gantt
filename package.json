@@ -1,0 +1,35 @@
+{
+  "name": "frappe-gantt",
+  "version": "0.0.1",
+  "description": "A simple Gantt library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frappe/gantt.git"
+  },
+  "keywords": [
+    "gantt",
+    "frappe"
+  ],
+  "author": "Faris Ansari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frappe/gantt/issues"
+  },
+  "homepage": "https://github.com/frappe/gantt#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "dependencies": {
+    "moment": "^2.15.1",
+    "snapsvg": "^0.4.0"
+  }
+}
