@@ -333,9 +333,8 @@ var Gantt = Class.extend({
 		row_y = me.opts.header_height + me.opts.padding/2;
 
 		this.tasks.forEach(function (task, i) {
-			var row_class = i % 2 ? "row-odd" : "row-even";
 			me.canvas.rect(0, row_y, row_width, row_height)
-				.addClass(row_class)
+				.addClass("grid-row")
 				.appendTo(rows);
 
 			me.canvas.line(0, row_y + row_height, row_width, row_y + row_height)
@@ -593,8 +592,7 @@ var Gantt = Class.extend({
 		});
 		return result;
 	}
-});
-;/*
+});;/*
 	Class: Bar
 
 	Opts:
@@ -827,7 +825,7 @@ var Bar = Class.extend({
 		}
 
 		function onmove_right(dx, dy) {
-			bar.finaldx = me.get_snap_position(me, bar, dx);
+			bar.finaldx = me.get_snap_position(dx);
 			me.update_bar_position(null, bar.owidth + bar.finaldx);
 		}
 		function onstop_right() {
@@ -1049,7 +1047,7 @@ var Bar = Class.extend({
 	update_details_position: function() {
 		var details_box = this.popover_group.select('.details-wrapper');
 		var pos = this.get_details_position();
-		details_box.transform("t" + pos.x + "," + pos.y);
+		details_box && details_box.transform("t" + pos.x + "," + pos.y);
 	},
 	unselect_all: function() {
 		this.canvas.selectAll('.bar-wrapper').forEach(function(el) {
